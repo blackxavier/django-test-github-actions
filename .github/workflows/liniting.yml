@@ -2,7 +2,7 @@ name: Pylint
 
 on: [push]
   workflow-dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,9 +11,9 @@ jobs:
         python-version: ["3.8", "3.9", "3.10"]
     steps:
       - name: checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@main
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
